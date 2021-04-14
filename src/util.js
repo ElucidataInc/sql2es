@@ -207,6 +207,13 @@ var trans = {
 	},
 	esQueryStringExpr: function(field, value) {
 		var expr = {
+			match: {
+			}
+		};
+		expr.match[field] = value;
+		return expr;
+
+		var expr = {
 			query_string: {
 				default_field: field
 			}
@@ -215,6 +222,13 @@ var trans = {
 		return expr;
 	},
     esQueryStringInExpr: function(field, value) {
+
+		var expr = {
+			match: {
+			}
+		};
+		expr.matchs[field] = value;
+		return expr;
 		var expr = {
 			query_string: {
 				default_field: field

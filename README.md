@@ -1,14 +1,6 @@
 # sql2es
 Use sql grammar change ES dsl
 
-#### 目前支持语法
-
-```
-
-&&、||、=、!=、in、and、or、like 
-
-eg:
-
 1. select * from test;
 
 2. select * from test where a = 1;
@@ -32,8 +24,6 @@ eg:
 ```
 
 
-#### 用法
-
 ```
 var sql2es = require('sql2es');
 
@@ -41,10 +31,6 @@ sql2es('select * from test;', function(err, q) {
   console.log(err, q);
 });
 ```
-
-#### [Demo](http://esql.thnuclub.com)
-
-#### 操作符转义对照表
 
 key  |  value
 ------------ | -------------
